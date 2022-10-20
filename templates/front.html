@@ -8,7 +8,10 @@
 <div class="container">
     <h1>BMI calculator</h1>
     <h3>Please fill the entries to get statistics</h3>
-    <form action="successful.html" method="POST">
+    <div class="message">
+        {{text|safe}}
+    </div>
+    <form action="{{url_for('success')}}" method="POST">
         <input title="Your email will be save with us" placeholder="Enter your email address" type="email"
                name="email_name" required><br>
         <input title="Your data will be save with us" placeholder="Enter your Height in cm" min="0", max="300"
